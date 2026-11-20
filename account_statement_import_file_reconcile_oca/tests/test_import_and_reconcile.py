@@ -1,4 +1,4 @@
-# Copyright 2022 Akretion France (http://www.akretion.com/)
+# Copyright 2026 MJDPAK
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3.0).
 
 from unittest.mock import patch
