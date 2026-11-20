@@ -7,7 +7,7 @@
     "website": "https://github.com/OCA/bank-statement-import",
     "author": "camptocamp, Odoo Community Association (OCA)",
     "license": "AGPL-3",
-    "installable": True,
+    "installable": False,
     "depends": ["account_statement_import_camt"],
     "data": ["views/account_journal_view.xml"],
 }

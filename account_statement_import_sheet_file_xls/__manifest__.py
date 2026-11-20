@@ -11,7 +11,7 @@
     "website": "https://github.com/OCA/bank-statement-import",
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "license": "AGPL-3",
-    "installable": True,
+    "installable": False,
     "external_dependencies": {"python": ["xlrd"]},
     "depends": [
         "account_statement_import_sheet_file",

@@ -13,5 +13,5 @@
     "summary": "Online bank statements for PayPal.com",
     "depends": ["account_statement_import_online"],
     "data": ["views/online_bank_statement_provider.xml"],
-    "installable": True,
+    "installable": False,
 }

@@ -12,6 +12,6 @@
     "website": "https://github.com/OCA/bank-statement-import",
     "depends": ["account_statement_import_file"],
     "data": ["wizards/account_statement_import_qif_view.xml"],
-    "installable": True,
+    "installable": False,
     "license": "AGPL-3",
 }

@@ -11,5 +11,5 @@
     "summary": "Online bank statements for Stripe",
     "depends": ["account_statement_import_online"],
     "data": ["views/online_bank_statement_provider.xml"],
-    "installable": True,
+    "installable": False,
 }

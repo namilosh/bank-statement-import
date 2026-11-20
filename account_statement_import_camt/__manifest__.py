@@ -9,4 +9,5 @@
     "category": "Banking addons",
     "depends": ["account_statement_import_file"],
     "data": ["wizard/account_bank_statement_import.xml"],
+    "installable": False,
 }

@@ -6,7 +6,7 @@
     "website": "https://github.com/OCA/bank-statement-import",
     "author": "Florent de Labarre, Odoo Community Association (OCA)",
     "license": "AGPL-3",
-    "installable": True,
+    "installable": False,
     "depends": ["account_statement_import_online"],
     "data": ["view/online_bank_statement_provider.xml"],
 }

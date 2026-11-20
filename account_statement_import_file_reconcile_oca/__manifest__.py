@@ -14,6 +14,6 @@
     "data": [
         "wizards/account_statement_import_view.xml",
     ],
-    "installable": True,
+    "installable": False,
     "auto_install": True,
 }
