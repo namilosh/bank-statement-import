@@ -4,7 +4,6 @@
 # Copyright 2025 Jacques-Etienne Baudoux (BCIM) <je@bcim.be>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from base64 import b64encode
 from decimal import Decimal
 from os import path
 from unittest.mock import Mock
@@ -13,6 +12,7 @@ from odoo import fields
 from odoo.exceptions import UserError
 from odoo.tests import common
 from odoo.tools import float_round, mute_logger
+from odoo.tools.binary import BinaryBytes
 
 
 class TestAccountStatementImportSheetFile(common.TransactionCase):
@@ -99,7 +99,7 @@ class TestAccountStatementImportSheetFile(common.TransactionCase):
             data = file.read()
             if encoding:
                 data = data.encode(encoding)
-            return b64encode(data)
+            return BinaryBytes(data)
 
     def test_import_csv_file(self):
         wizard = self._get_import_wizard("fixtures/sample_statement_en.csv")
