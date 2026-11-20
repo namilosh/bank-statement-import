@@ -3,7 +3,6 @@ exclude: |
   # NOT INSTALLABLE ADDONS
   ^account_statement_import_camt/|
   ^account_statement_import_camt54/|
-  ^account_statement_import_file_reconcile_oca/|
   ^account_statement_import_online/|
   ^account_statement_import_online_gocardless/|
   ^account_statement_import_online_paypal/|
