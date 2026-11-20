@@ -1,10 +1,9 @@
 # Copyright 2024 Sygel - Manuel Regidor
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
-import base64
-
 import odoo.tests.common as common
 from odoo.exceptions import UserError
+from odoo.tools.binary import BinaryBytes
 from odoo.tools.misc import file_path
 
 
@@ -15,10 +14,16 @@ class TestAccountStatementImportFile(common.TransactionCase):
         cls.eur_currency = cls.env.ref("base.EUR")
         cls.eur_currency.write({"active": True})
         cls.bank_account = cls.env["res.partner.bank"].create(
-            {"acc_number": "1111111111", "partner_id": cls.env.company.partner_id.id}
+            {
+                "account_number": "1111111111",
+                "partner_id": cls.env.company.partner_id.id,
+            }
         )
         cls.bank_account_2 = cls.env["res.partner.bank"].create(
-            {"acc_number": "3333333333", "partner_id": cls.env.company.partner_id.id}
+            {
+                "account_number": "3333333333",
+                "partner_id": cls.env.company.partner_id.id,
+            }
         )
         cls.journal_1 = cls.env["account.journal"].create(
             {
@@ -39,7 +44,8 @@ class TestAccountStatementImportFile(common.TransactionCase):
         f_path = file_path(
             "account_statement_import_file/tests/samples/test_statement_import.txt"
         )
-        file = base64.b64encode(open(f_path, "rb").read())
+        with open(f_path, "rb") as f:
+            file = BinaryBytes(f.read())
         cls.import_wizard = (
             cls.env["account.statement.import"]
             .with_context(journal_id=cls.journal_1.id)
